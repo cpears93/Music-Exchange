@@ -1,8 +1,9 @@
 package instrument;
 
 import instruments.IPlay;
+import shop.ISell;
 
-public class Guitar extends Instrument {
+public class Guitar extends Instrument implements ISell {
 
     private int strings;
     private int purchasePrice;
@@ -27,5 +28,13 @@ public class Guitar extends Instrument {
     @Override
     public int getSellingPrice() {
         return sellingPrice;
+    }
+
+    public void Sell(Instrument Instrument) {
+
+    }
+
+    public int setSellValue() {
+        return 0;
     }
 }

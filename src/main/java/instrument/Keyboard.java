@@ -1,8 +1,9 @@
 package instrument;
 
 import instruments.IPlay;
+import shop.IShop;
 
-public class Keyboard extends Instrument {
+public class Keyboard extends Instrument implements IShop {
 
     private int musicSheet;
     private int purchasePrice;
@@ -27,5 +28,13 @@ public class Keyboard extends Instrument {
     @Override
     public int getSellingPrice() {
         return sellingPrice;
+    }
+
+    public void buy(Instrument Instrument) {
+
+    }
+
+    public int getBuyPrice() {
+        return 0;
     }
 }
