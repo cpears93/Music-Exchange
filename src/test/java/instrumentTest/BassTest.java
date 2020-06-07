@@ -1,30 +1,37 @@
 package instrumentTest;
 
 import instrument.Bass;
-import instrument.Instrument;
-import instruments.Instruments;
 import org.junit.Before;
 import org.junit.Test;
-import shop.ISell;
-import shop.IShop;
+
+import static org.junit.Assert.assertEquals;
 
 public class BassTest {
 
-    Instruments instruments;
     Bass bass;
-    ISell sellingPrice;
-    IShop purchasePrice;
 
     @Before
     public void before(){
-        instruments = new Instruments();
-        bass = new Bass();
-        sellingPrice = new SellingPrice(100);
-        purchasePrice = new PurchasePrice(80);
+        bass = new Bass("Fender",7, 80000, 100000);
     }
 
     @Test
     public void getName(){
-        assertEqual("", bass.getName());
+        assertEquals("Fender",bass.getName());
+    }
+
+    @Test
+    public void getStrings(){
+        assertEquals(7, bass.getStrings());
+    }
+
+    @Test
+    public void getPurchasePrice(){
+        assertEquals(80000, bass.getPurchasePrice());
+    }
+
+    @Test
+    public void getSellingPrice(){
+        assertEquals(100000, bass.getSellingPrice());
     }
 }
