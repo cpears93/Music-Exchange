@@ -12,12 +12,12 @@ public class KeyboardTest {
     
     @Before
     public void before(){
-        keyboard = new Keyboard("Yamaha", 4, 1500, 1800);
+        keyboard = new Keyboard("Korg", 4, 1500, 1800);
     }
 
     @Test
     public void getName(){
-        assertEquals("Yamaha", keyboard.getName());
+        assertEquals("Korg", keyboard.getName());
     }
 
     @Test
