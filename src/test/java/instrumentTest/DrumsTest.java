@@ -12,7 +12,7 @@ public class DrumsTest {
 
     @Before
     public void before(){
-        drums = new Drums("Roland", 2, 60000, 75000);
+        drums = new Drums("Roland", 2, 600, 750);
     }
 
     @Test
@@ -27,11 +27,11 @@ public class DrumsTest {
 
     @Test
     public void getPurchasePrice(){
-        assertEquals(60000, drums.getPurchasePrice());
+        assertEquals(600, drums.getPurchasePrice());
     }
 
     @Test
     public void getSellingPrice(){
-        assertEquals(75000, drums.getSellingPrice());
+        assertEquals(750, drums.getSellingPrice());
     }
 }

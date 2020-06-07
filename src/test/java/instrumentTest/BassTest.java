@@ -12,7 +12,7 @@ public class BassTest {
 
     @Before
     public void before(){
-        bass = new Bass("Fender",7, 80000, 100000);
+        bass = new Bass("Fender",7, 300, 500);
     }
 
     @Test
@@ -27,11 +27,11 @@ public class BassTest {
 
     @Test
     public void getPurchasePrice(){
-        assertEquals(80000, bass.getPurchasePrice());
+        assertEquals(300, bass.getPurchasePrice());
     }
 
     @Test
     public void getSellingPrice(){
-        assertEquals(100000, bass.getSellingPrice());
+        assertEquals(500, bass.getSellingPrice());
     }
 }
