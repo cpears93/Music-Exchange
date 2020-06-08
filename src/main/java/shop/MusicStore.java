@@ -16,7 +16,6 @@ public class MusicStore {
         this.ishop = ishop;
         this.name = name;
         this.stock = stock;
-        this.stockValue = 2;
         this.stockValue = stockValue;
         this.addToStock = addToStock;
         this.removeFromStock = removeFromStock;
@@ -34,21 +33,21 @@ public class MusicStore {
         return name;
     }
 
-    public void getAddToStock(int value) {
-        if (stockValue > 0){
-            value = value /2;
-            this.stockValue += 1;
-        }
-        super.addToStock(value);
+    public int getAddToStock() {
+        return addToStock;
     }
 
-    public void getRemoveFromStock(int value) {
-        if (stockValue < 0){
-            value = value /2;
-            this.stockValue -= 1;
-        }
-        super.removeFromStock(value);
+    public int getRemoveFromStock(ISell item) {
+        return removeFromStock;
     }
 
+    public int stockCount(){
+        return this.stock.size();
+    }
 
+    public void addToStock(ISell guitar) {
+    }
+
+    public void removeFromStock(ISell guitar) {
+    }
 }

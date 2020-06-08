@@ -20,7 +20,7 @@ public class MusicStoreTest {
     public void before(){
         musicStore = new MusicStore();
         keyboard = new Keyboard("Yamaha", 3, 500, 700);
-        guitar = new Guitar("Les Paul", 6, 1200, 1500);
+
     }
 
     @Test
@@ -30,13 +30,15 @@ public class MusicStoreTest {
 
     @Test
     public void canAddToStock(){
-        musicStore.stock(1);
-        assertEquals(3, musicStore.getAddToStock());
+        guitar = new Guitar("Les Paul", 6, 1200, 1500);;
+        assertEquals(1, musicStore.getAddToStock());
     }
 
     @Test
     public void canRemoveFromStock(){
-        musicStore.stock(1);
-        assertEquals(2, musicStore.getRemoveFromStock());
+        musicStore.addToStock(guitar);
+        musicStore.removeFromStock(guitar);
+        assertEquals(0, musicStore.stockCount());
+
     }
 }
